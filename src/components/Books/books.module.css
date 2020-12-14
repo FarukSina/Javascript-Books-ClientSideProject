@@ -1,0 +1,37 @@
+.rowLength {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0 auto;
+  background-color: powderblue;
+  border-radius: 10px;
+}
+
+a {
+  color: powderblue;
+}
+td {
+  color: powderblue;
+}
+
+a:hover {
+  color: yellowgreen;
+}
+
+.searchField {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.searchField label {
+  padding-right: 5px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+.searchField input {
+  width: 50%;
+}
