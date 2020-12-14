@@ -17,7 +17,7 @@ const Books = () => {
   console.log("globalStore", globalStore.REACT_APP_ENDPOINT)
 
   const onChange = (event) => {
-   const {name, value} = event.target
+   const { value} = event.target
    searchField(value)
   }
 
@@ -53,7 +53,7 @@ const Books = () => {
       }
 
     });
-  }, [globalStore.REACT_APP_ENDPOINT,]);
+  }, [globalStore, setNotification ]);
   console.log("filteredBooks", filteredBooks)
   return (
     books ? (

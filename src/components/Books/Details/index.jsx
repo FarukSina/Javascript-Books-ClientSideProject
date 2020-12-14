@@ -4,7 +4,6 @@ import { GlobalStoreContext } from '../../shared/Globals';
 import { NotificationContext } from '../../shared/Notifications';
 import { Container, Table } from 'react-bootstrap';
 import Header from '../../shared/Header';
-import {Link} from "react-router-dom";
 import {UserContext} from "./../../Authentication/UserProvider"
 
 const Details = (props) => {
@@ -26,7 +25,7 @@ const Details = (props) => {
         message: "Couldn't access the specific book___id at this time."
       });
     })
-  }, [globalStore]);
+  }, [globalStore, props.match.params.id, setNotification, user]);
   console.log("book map details", book)
 
   return (

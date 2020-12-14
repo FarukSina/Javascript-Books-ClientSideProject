@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 const Show = () => {
   const { user } = useContext(UserContext);
   const { globalStore } = useContext(GlobalStoreContext);
-  const { setNotification } = useContext(NotificationContext);
   const [userDetails, setUserDetails] = useState(null);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const Show = () => {
     .then(({ data }) => {
       setUserDetails(data);
     });
-  }, []);
+  }, [globalStore, user]);
 
   return (
     userDetails ? (
@@ -41,6 +40,7 @@ const Show = () => {
 
           <Media>
             <img
+              alt="logo"
               src="https://via.placeholder.com/150"
               width={150}
               height={150}

@@ -5,7 +5,6 @@ import {UserContext} from "../../Authentication/UserProvider"
 import Axios from "axios";
 import { GlobalStoreContext } from '../../shared/Globals';
 import {Redirect} from "react-router-dom";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 const BookForm = ({endpoint , buttonLabel, preloadData = {}}) => {
     const [inputs, setInputs] = useState({...preloadData});
@@ -33,8 +32,7 @@ const BookForm = ({endpoint , buttonLabel, preloadData = {}}) => {
         {
             ...inputs,
             secret_token : user && user.token
-        }).
-        then(({ data }) => {
+        }).then(({ data }) => {
             if(data){
                 setNotification({
                     type: "success",

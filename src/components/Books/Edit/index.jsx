@@ -23,7 +23,7 @@ export default function Edit(props) {
             message: "Couldn't access the specific book___id at this time."
           });
         })
-      }, [globalStore]);
+      }, [globalStore, props.match.params.id, setNotification, user]);
       console.log("book edit 1 specific id", book)
     return (
         book ? (
