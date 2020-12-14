@@ -3,7 +3,6 @@ import React, { useState, useContext } from 'react';
 import { useEffect } from 'react';
 import { UserContext } from '../../Authentication/UserProvider';
 import { GlobalStoreContext } from '../../shared/Globals';
-import { NotificationContext } from '../../shared/Notifications';
 import { Container, Media } from 'react-bootstrap';
 import Header from '../../shared/Header';
 import { Link } from 'react-router-dom';
